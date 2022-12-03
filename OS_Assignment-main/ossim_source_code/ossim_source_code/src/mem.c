@@ -128,7 +128,7 @@ addr_t alloc_mem(uint32_t size, struct pcb_t *proc)
         }
     }
     if (cr_num_pages >= num_pages && 
-    		proc->bp + num_pages * PAGE_SIZE <= RAM_SIZE)
+    		proc->bp + num_pages * PAGE_SIZE <= NUM_PAGES*PAGE_SIZE)
     {
         mem_avail = 1;
     }
